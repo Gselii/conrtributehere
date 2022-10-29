@@ -1,17 +1,13 @@
-// { Driver Code Starts
-// Initial Template for C++
-
 #include <bits/stdc++.h>
 using namespace std;
-
- // } Driver Code Ends
-// User function Template for C++
 
 class Solution{
     vector<vector<int>> val;
     vector<int> curr;
     int pos[11];
 public:
+
+    //function to check if the move is safe
     bool isSafe(int row, int col,int n) {
         for(int i=0;i<row;i++){
             if(i!=row){
@@ -22,6 +18,7 @@ public:
         return true;
     }
 
+    //recursion + backtracking
     bool backtrack_rec(int row,int n) {
 
         if(row>=n){
@@ -44,6 +41,7 @@ public:
         return false;
     }
 
+    //utility function
     vector<vector<int>> nQueen(int n) {
         vector<int> v;
         int pos[n];
@@ -52,8 +50,6 @@ public:
         return val;
     }
 };
-
-// { Driver Code Starts.
 
 int main(){
     int t;
@@ -77,4 +73,4 @@ int main(){
         }
     }
     return 0;
-}  // } Driver Code Ends
+} 
